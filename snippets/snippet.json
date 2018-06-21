@@ -1,0 +1,35 @@
+{
+    "New Duck": {
+        "prefix": "duck",
+        "description": "Create a new Duck",
+        "body": [
+            "interface Action {",
+            "\treadonly type?: string;",
+            "}",
+            "",
+            "const defaultState = {};",
+            "",
+            "// Actions",
+            "const ${1:ACTION} = '${0:${TM_FILENAME_BASE}}/${1:ACTION}';",
+            "",
+            "// Reducer",
+            "export default function ${2:reducer}(state = defaultState, action: Action = {}) {",
+            "\tswitch (action.type) {",
+            "\t\tcase ${1:ACTION}: {",
+            "\t\t\treturn state;",
+            "\t\t}",
+            "",
+            "\t\tdefault: {",
+            "\t\t\treturn state;",
+            "\t\t}",
+            "\t}",
+            "}",
+            "",
+            "// Action Creators",
+            "",
+            "export function ${3:actionCreator}() {",
+            "\treturn { type: ${1:ACTION} };",
+            "}"
+        ]
+    }
+}
